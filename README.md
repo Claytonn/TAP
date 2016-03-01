@@ -31,4 +31,9 @@ var textArea = new tap(element, {
 		]
 	});
 ```
+#### To Do
 
+- [ ] Add Event Callbacks
+- [ ] Replace innerHTML method w/ createElement()
+- [ ] Add custom event listeners
+- [ ] Add box resizing w/ overflow options
