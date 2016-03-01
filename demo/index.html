@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TAP - Text Area Processor</title>	
+	<script type="text/javascript" src="tap.js"></script> 
+	<style type="text/css">
+	.tap-text-input{
+		width:400px;
+		height:100px;
+		margin:20px 0;
+		border-radius: 3px;
+		border:1px solid #c4c4c4;
+		padding:10px;
+	}
+
+	.tap-text-input > span.tap-red{
+		color:red;
+	}
+
+	.tap-text-input > span.tap-blue{
+		color:blue;
+	}
+
+	.tap-text-input > span.tap-green{
+		color:green;
+	}
+
+	.tap-text-input > span.tap-italic{
+		font-style: italic;
+	}
+
+	.tap-text-input > span.tap-bold{
+		font-weight: 800;
+	}
+
+	.tap-text-input > span.tap-username{
+		color:#457abb;
+		font-family: Arial;
+		font-size: 12px;
+	}
+	pre.prettyprint{
+    width: auto;
+    overflow: auto;
+    max-height: 600px
+	}
+	</style>
+</head>
+<body>
+	<h1>TAP - Text Area Processor</h1>
+	<h2>Text highlighter and HTML formatter.</h2>
+
+	<h3>To Do:</h3>
+	<ul>
+		<li>Add Event Callbacks</li>
+		<li>Replace innerHTML method w/ createElement()</li>
+		<li>Add custom event listeners</li>
+		<li>Add box resizing w/ overflow options</li>
+	</ul>
+
+	<h3>Demo</h3>
+
+	<textarea id="tap-single" class="tap-text-input" placeholder="Textarea With ID"></textarea>
+	<input id="tap-control-length" type="button" value="Console Log Length"/>
+	<input id="tap-control-clear" type="button" value="Clear"/>
+
+	<h3>TAP Usage</h3>
+
+	<p>tap(element, options); (Expects A Textarea Element Only)</p>
+
+	<h3>Example</h3>
+<pre class="prettyprint">
+// Instantiate TAP
+var textArea = new tap(element, {
+
+	patterns: [
+	{
+			regex: ['(@\\w{1,15})', 'gi'], // RegExp [pattern, flag]
+			element: 'span', // Wrapping Tag
+			attributes: {
+				// Element Attributes
+				class: 'tap-username'
+			}
+		},
+		{
+			regex: ['\\b(bold)\\b', 'gi'],
+			element: 'span',
+			attributes: {
+				class: 'tap-bold'
+			}
+		},
+		{
+			regex: ['\\b(italic)\\b', 'gi'],
+			element: 'span',
+			attributes: {
+				class: 'tap-italic'
+			}
+		},
+		{
+			regex: ['\\b(blue)\\b', 'gi'], 
+			element: 'span',
+			attributes: {
+				class: 'tap-blue'
+			}
+		},
+		{
+			regex: ['\\b(red)\\b', 'gi'],
+			element: 'span',
+			attributes: {
+				class: 'tap-red'
+			}
+		},
+		{
+			regex: ['\\b(green)\\b', 'gi'],
+			element: 'span',
+			attributes: {
+				class: 'tap-green'
+			}
+		},
+		{
+			regex: ['\\b(link)\\b', 'gi'],
+			element: 'a',
+			attributes: {
+				class: 'tap-link',
+				href: 'http://claytonn.com'
+			}
+		}
+		]
+	});</pre>
+</body>
+
+<script type="text/javascript">
+
+var tAElm = document.getElementById('tap-single');
+
+// Instantiate TAP
+var tA = new tap(tAElm, {
+	patterns: [
+	{
+			regex: ['(@\\w{1,15})', 'gi'], // RegExp [pattern, flag]
+			element: 'span', // Wrapping Tag
+			attributes: {
+				// Element Attributes
+				class: 'tap-username'
+			}
+		},
+		{
+			regex: ['\\b(bold)\\b', 'gi'],
+			element: 'span',
+			attributes: {
+				class: 'tap-bold'
+			}
+		},
+		{
+			regex: ['\\b(italic)\\b', 'gi'],
+			element: 'span',
+			attributes: {
+				class: 'tap-italic'
+			}
+		},
+		{
+			regex: ['\\b(blue)\\b', 'gi'], 
+			element: 'span',
+			attributes: {
+				class: 'tap-blue'
+			}
+		},
+		{
+			regex: ['\\b(red)\\b', 'gi'],
+			element: 'span',
+			attributes: {
+				class: 'tap-red'
+			}
+		},
+		{
+			regex: ['\\b(green)\\b', 'gi'],
+			element: 'span',
+			attributes: {
+				class: 'tap-green'
+			}
+		},
+		{
+			regex: ['\\b(link)\\b', 'gi'],
+			element: 'a',
+			attributes: {
+				class: 'tap-link',
+				href: 'http://claytonn.com'
+			}
+		}
+		]
+	});
+
+document.getElementById('tap-control-length').addEventListener('click', function(e){
+	console.log(tA.textLength());
+});
+
+document.getElementById('tap-control-clear').addEventListener('click', function(e){
+	console.log(tA.clear());
+});
+
+</script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</html>
