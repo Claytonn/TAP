@@ -7,7 +7,7 @@
 
 **Element paramenter expects textarea inputs only**
 
-#### Exmaple Usage
+#### Example Usage
 ```
 // Instantiate TAP
 var textArea = new tap(element, {
