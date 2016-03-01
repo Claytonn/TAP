@@ -16,8 +16,7 @@ var textArea = new tap(element, {
 	{
 			regex: ['(@\\w{1,15})', 'gi'], // RegExp [pattern, flag]
 			element: 'span', // Wrapping Tag
-			attributes: {
-				// Element Attributes
+			attributes: { // Element Attributes
 				class: 'tap-username'
 			}
 		},
