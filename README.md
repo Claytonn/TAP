@@ -3,7 +3,7 @@
 
 #### Usage
 
-> tap(element, options);
+> new tap(element, options);
 
 **element paramenter expects textarea inputs only**
 
