@@ -1,6 +1,7 @@
-# TAP - Text Area Processor (Text highlighter and HTML formatter)
-Format textarea inputs with regex patterns.
+# TAP - Text Area Processor 
+## Text highlighter and HTML formatter
+###Format textarea inputs with regex patterns.
 
-Exmaple Usage
+## Exmaple Usage
 
-var textAra = new tap(element, options);
+> var textArea = new tap(element, options);
