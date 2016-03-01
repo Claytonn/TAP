@@ -22,41 +22,6 @@ var textArea = new tap(element, {
 			}
 		},
 		{
-			regex: ['\\b(bold)\\b', 'gi'],
-			element: 'span',
-			attributes: {
-				class: 'tap-bold'
-			}
-		},
-		{
-			regex: ['\\b(italic)\\b', 'gi'],
-			element: 'span',
-			attributes: {
-				class: 'tap-italic'
-			}
-		},
-		{
-			regex: ['\\b(blue)\\b', 'gi'], 
-			element: 'span',
-			attributes: {
-				class: 'tap-blue'
-			}
-		},
-		{
-			regex: ['\\b(red)\\b', 'gi'],
-			element: 'span',
-			attributes: {
-				class: 'tap-red'
-			}
-		},
-		{
-			regex: ['\\b(green)\\b', 'gi'],
-			element: 'span',
-			attributes: {
-				class: 'tap-green'
-			}
-		},
-		{
 			regex: ['\\b(link)\\b', 'gi'],
 			element: 'a',
 			attributes: {
