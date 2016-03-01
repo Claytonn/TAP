@@ -34,6 +34,6 @@ var textArea = new tap(element, {
 #### To Do
 
 - [ ] Add Event Callbacks
-- [ ] Replace innerHTML method w/ createElement()
-- [ ] Attach Event Listeners to TAP Generated Elements
-- [ ] Add box resizing w/ overflow options
+- [ ] Replace innerHTML Method W/ createElement()
+- [ ] Attach Event Listeners To TAP Generated Elements
+- [ ] Add Box Resizing W/ Overflow Options
