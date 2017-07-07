@@ -10,7 +10,7 @@
 **Element paramenter expects textarea inputs only**
 
 #### Example Usage
-```
+```javascript
 // Instantiate TAP
 var textArea = new tap(element, {
 
